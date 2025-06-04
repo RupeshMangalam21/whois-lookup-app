@@ -34,40 +34,40 @@ A full-stack web application that provides comprehensive domain information usin
 
 ### 2. Clone and Install
 
-\`\`\`bash
+```bash
 # Clone the repository
 git clone <your-repo-url>
 cd whois-lookup-app
 
 # Install dependencies
 npm install --legacy-peer-deps
-\`\`\`
+```
 
 ### 3. Environment Configuration
 
-\`\`\`bash
+```bash
 # Edit .env.local and add your API key
 WHOIS_API_KEY=your_actual_api_key_here
-\`\`\`
+```
 
 ### 4. Run the Application
 
-\`\`\`bash
+```bash
 # Start the development server
 npm run dev
-\`\`\`
+```
 
 The application will be available at `http://localhost:3000`
 
 ### 5. For Production Deployment on Port 5000
 
-\`\`\`bash
+```bash
 # Build the application
 npm run build
 
 # Start the production server on port 5000
 npm start -- -p 5000
-\`\`\`
+```
 
 ## Usage
 
@@ -83,15 +83,15 @@ npm start -- -p 5000
 Fetches WHOIS data for a given domain.
 
 **Request Body:**
-\`\`\`json
+```json
 {
   "domain": "amazon.com",
   "type": "domain" // or "contact"
 }
-\`\`\`
+```
 
 **Response (Domain Info):**
-\`\`\`json
+```json
 {
   "domainName": "amazon.com",
   "registrar": "MarkMonitor Inc.",
@@ -100,21 +100,21 @@ Fetches WHOIS data for a given domain.
   "estimatedDomainAge": "29 years, 2 months",
   "hostnames": "ns1.amazon.com, ns2.amazon.com..."
 }
-\`\`\`
+```
 
 **Response (Contact Info):**
-\`\`\`json
+```json
 {
   "registrantName": "Amazon Technologies, Inc.",
   "technicalContactName": "Hostmaster",
   "administrativeContactName": "Admin Contact",
   "contactEmail": "hostmaster@amazon.com"
 }
-\`\`\`
+```
 
 ## Project Structure
 
-\`\`\`
+```
 whois-lookup-app/
 ├── app/
 │   ├── api/whois/route.ts    # Backend API endpoint
@@ -125,7 +125,7 @@ whois-lookup-app/
 ├── .env.example            # Environment variables template
 ├── README.md              # This file
 └── package.json          # Dependencies and scripts
-\`\`\`
+```
 
 ## Error Handling
 
@@ -148,10 +148,10 @@ Test the application with known domains:
 
 ### Local Deployment (Port 5000)
 
-\`\`\`bash
+```bash
 npm run build
 npm start -- -p 5000
-\`\`\`
+```
 
 ## License
 
@@ -164,4 +164,3 @@ If you encounter any issues:
 2. Verify the domain name format
 3. Check the browser console for detailed error messages
 4. Ensure you have a stable internet connection
-\`\`\`
